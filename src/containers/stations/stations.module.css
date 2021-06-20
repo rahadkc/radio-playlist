@@ -1,0 +1,5 @@
+.box {
+    background: var(--main-bg-lighter-color);
+    /* min-height:400px; */
+    padding: 0.9375rem 2.5rem;
+}
