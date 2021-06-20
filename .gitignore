@@ -8,8 +8,13 @@
 # testing
 /coverage
 
+
 # production
 /build
+
+# Editor
+/.vscode
+
 
 # misc
 .DS_Store

@@ -1,0 +1,25 @@
+.list {}
+
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    color: var(--text-color);
+    font-size: 2.625rem;
+    padding: 3.25rem 0 2.25rem;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+div[data-item-index]:not(:last-of-type) {
+    border-bottom: var(--list-border-width) solid var(--border);
+}
+
+.name {
+    text-align: left;
+}
+
+.value {
+    font-family: var(--numeric-font);
+    text-align: right;
+}

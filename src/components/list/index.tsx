@@ -1,6 +1,7 @@
 import React from 'react'
 import { Virtuoso } from 'react-virtuoso'
 import settings from '../../lib/settings'
+import ListItem from '../listItem'
 import Loading from '../loading'
 import NoData from '../noData'
 
@@ -71,7 +72,14 @@ const List = <T extends {}>({
         if (listitemcontent) {
           return listitemcontent(index, item)
         }
-        return <div>hello</div>
+        return (
+          <ListItem
+            index={index}
+            item={item}
+            activeIndex={activeIndex}
+            handleClick={handleItemClick}
+          />
+        )
       }}
     />
   )

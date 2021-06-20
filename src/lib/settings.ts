@@ -3,7 +3,9 @@ enum settings {
   STATION_HEADER_TITLE = 'STATIONS',
   STATION_FOOTER_TITLE = 'Currently Playing',
   LOADING_TEXT = 'Loading...',
-  NO_DATA_AVAILABLE_TEXT = ':) No Radio Station available'
+  NO_DATA_AVAILABLE_TEXT = ':) No Radio Station available',
+  NEXT = 'Next',
+  PREVIOUS = 'Previous'
 }
 
 export default settings
