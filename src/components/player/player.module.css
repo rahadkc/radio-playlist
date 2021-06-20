@@ -1,0 +1,27 @@
+
+.prev, .next {
+    width: 64px; 
+    height: 64px;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 0;
+}
+
+.prev:hover, .next:hover,
+.prev:active, .next:active {
+    opacity: var(--opacity);
+}
+
+.player {
+    padding: 1.25rem 0;
+    height: 13.75rem;
+}
+
+@media (max-width: 840px) {
+    .prev, .next {
+        transform: scale(.8)
+    }
+    .preview {
+        max-width: 156px;
+    }
+}
