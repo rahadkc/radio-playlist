@@ -9,10 +9,11 @@ describe('<Footer> component', () => {
   const name = 'Test FM'
 
   test('should render Footer component', () => {
-    render(<Footer title={title} />)
+    render(<Footer title={title} name={undefined} />)
 
     // If Only 'Title' prop send nothing to display
     expect(screen.queryByText(title)).toBeNull()
+    expect(screen.queryByText(title)).not.toBeInTheDocument()
     expect(screen.queryByText(title)).toMatchSnapshot()
 
     render(<Footer title={title} name={name} />)

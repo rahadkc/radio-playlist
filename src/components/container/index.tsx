@@ -1,5 +1,6 @@
+import classNames from 'classnames'
 import React from 'react'
-import styles from '../css/container.module.css'
+import styles from './container.module.css'
 
 export type IContainerProps = {
   children: React.ReactNode
@@ -8,8 +9,9 @@ export type IContainerProps = {
 }
 
 const Container: React.FC<IContainerProps> = ({ children, classes = '', style = {} }) => {
+  const styleClasses = classNames(styles.container, classes)
   return (
-    <div style={style} className={`${styles.container} ${classes}`}>
+    <div style={style} className={styleClasses}>
       {children}
     </div>
   )

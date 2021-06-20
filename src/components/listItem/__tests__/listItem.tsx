@@ -9,14 +9,17 @@ const props = {
 }
 
 describe('<ListItem> component', () => {
-  afterEach(cleanup)
+  const itemName = props?.item?.name
+
+  afterEach(() => {
+    cleanup
+  })
 
   test('render ListItem component', () => {
     render(<ListItem {...props} />)
   })
 
   test('render item in the document', () => {
-    const itemName = props?.item?.name
     const { queryByText } = render(<ListItem {...props} />)
     expect(queryByText(itemName)).toBeInTheDocument()
     expect(queryByText(itemName)).toMatchSnapshot()

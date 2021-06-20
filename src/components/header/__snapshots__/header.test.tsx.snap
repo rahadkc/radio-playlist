@@ -1,21 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer> component should render Footer component 1`] = `
-<div
-  class="title"
->
-  Station List
-</div>
-`;
-
-exports[`<Footer> component should render Header component 1`] = `
-<div
-  class="title"
->
-  Station List
-</div>
-`;
-
 exports[`<Footer> component should render Header component with title prop 1`] = `
 <div
   class="title"
