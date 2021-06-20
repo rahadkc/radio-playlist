@@ -1,0 +1,7 @@
+.wrapper {
+    padding: 3.125rem 0.9375rem;
+    display: flex;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+}
