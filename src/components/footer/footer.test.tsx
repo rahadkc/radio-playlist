@@ -11,11 +11,13 @@ describe('<Footer> component', () => {
 
     // If Only 'Title' prop send nothing to display
     expect(screen.queryByText(title)).toBeNull()
+    expect(screen.queryByText(title)).toMatchSnapshot()
 
     render(<Footer title={title} name={name} />)
 
     // If 'Name' prop send then display 'title' and 'name'
     expect(screen.getByText(title)).toBeInTheDocument()
     expect(screen.getByText(name)).toBeInTheDocument()
+    expect(screen.getByText(name)).toMatchSnapshot()
   })
 })

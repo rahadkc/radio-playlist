@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer> component should render Footer component 1`] = `null`;
+
+exports[`<Footer> component should render Footer component 2`] = `
+<div
+  class="name"
+>
+  Test FM
+</div>
+`;
