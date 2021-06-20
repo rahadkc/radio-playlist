@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react'
+import { cleanup, render, screen } from '@testing-library/react'
 import * as React from 'react'
-import { Footer } from './index'
+import Footer from './index'
 
 describe('<Footer> component', () => {
+  afterEach(cleanup)
+
   const title = 'Test Title'
   const name = 'Test FM'
 

@@ -1,0 +1,50 @@
+
+.box {
+    background: var(--yellow-color);
+    padding: 3.25rem 3.125rem; /*52px 50px*/
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.backButton,
+.stopButton {
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0
+}
+
+.backButton {
+    width: 52px;
+    height: 48px;
+}
+
+.stopButton {
+    width: 52px;
+    height: 52px;
+}
+
+.backButton:hover, .stopButton:hover, 
+.backButton:active, .stopButton:active {
+    opacity: var(--opacity);
+}
+
+@media (max-width: 840px) {
+
+    .backButton {
+        transform: scale(.8) translate(-8px, -6px);
+    }
+    .stopButton {
+        transform: scale(.8) translate(8px, -8px);
+    }
+}
+
+@media (max-width: 640px) {
+    .box {
+        padding: 3rem 2.8rem
+    }
+}

@@ -1,0 +1,31 @@
+.footer  {
+}
+
+.box {
+    background: var(--main-bg-light-color);
+    padding: 2.688rem 0.9375rem; /* 40px 15px*/
+    border-radius: 0 0 var(--radius) var(--radius);
+    border-top: 1px solid var(--border-light);
+    text-align: center;
+    box-shadow: 0px 34px 20px -20px black;
+    min-height: 118px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 1.25rem; /*20px*/
+    margin: 0;
+    color: var(--yellow-color);
+}
+
+.name {
+    font-size: 2.5rem; /*40px*/
+    margin: 0;
+    color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+    .box {
+        min-height: 156px;
+    }
+}
