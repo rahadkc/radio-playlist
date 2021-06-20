@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemContent> component render ListItem component 1`] = `
+<div
+  class="value"
+>
+  98.4
+</div>
+`;

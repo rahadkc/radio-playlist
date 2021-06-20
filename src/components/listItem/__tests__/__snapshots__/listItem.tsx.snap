@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem> component render item in the document 1`] = `
+<div
+  class="name"
+>
+  Arman
+</div>
+`;
