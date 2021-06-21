@@ -24,4 +24,4 @@ export const Footer: React.FC<FooterProps> = ({ title, name }) => {
   )
 }
 
-export default Footer
+export default React.memo(Footer)

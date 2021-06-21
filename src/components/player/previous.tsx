@@ -20,4 +20,4 @@ const Previous: React.FC<PreviousProps> = ({ onClick }) => {
   )
 }
 
-export default Previous
+export default React.memo(Previous)

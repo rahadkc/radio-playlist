@@ -20,4 +20,4 @@ const Next: React.FC<NextProps> = ({ onClick }) => {
   )
 }
 
-export default Next
+export default React.memo(Next)

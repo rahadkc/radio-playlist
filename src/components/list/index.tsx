@@ -85,4 +85,4 @@ const List = <T extends {}>({
   )
 }
 
-export default List
+export default React.memo(List)
