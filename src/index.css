@@ -58,9 +58,25 @@ img {
   max-width: 100%;
 }
 
+/* Scrollbar */
 .rc-scrollbars-container {
   overflow: hidden!important;
 }
+
+.rc-scrollbars-container .rc-scrollbars-track.rc-scrollbars-track-v{
+  opacity: 0;
+  transition: .2s;;
+}
+
+.rc-scrollbars-container:hover .rc-scrollbars-track.rc-scrollbars-track-v{
+  opacity: 1;
+}
+
+.rc-scrollbars-thumb.rc-scrollbars-thumb-v {
+  height: 140px!important;
+  border-radius: 15px;
+}
+
 
 @media only screen and (max-width: 840px) {
   html {
