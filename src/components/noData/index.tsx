@@ -12,4 +12,4 @@ const NoData: React.FC<NoDataProps> = ({ content }) => {
   return <div className={styles.noData}>{dataContent}</div>
 }
 
-export default NoData
+export default React.memo(NoData)

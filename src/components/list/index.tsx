@@ -81,4 +81,4 @@ const List = <T extends {}>({
   return <Virtuoso {...listProps} />
 }
 
-export default List
+export default React.memo(List)

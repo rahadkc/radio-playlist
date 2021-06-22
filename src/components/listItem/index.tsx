@@ -63,4 +63,4 @@ const ListItem: React.FC<ListItemProps> = ({ index, item, activeIndex, handleCli
   )
 }
 
-export default ListItem
+export default React.memo(ListItem)

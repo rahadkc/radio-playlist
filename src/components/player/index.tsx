@@ -22,4 +22,4 @@ const Player: React.FC<PlayerProps> = ({ prevClick, nextClick }) => {
   )
 }
 
-export default Player
+export default React.memo(Player)

@@ -16,4 +16,4 @@ const ItemContent: React.FC<ItemContentProps> = ({ name, value, style = {} }) =>
   )
 }
 
-export default ItemContent
+export default React.memo(ItemContent)

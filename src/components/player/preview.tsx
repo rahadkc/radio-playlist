@@ -14,4 +14,4 @@ const Preview: React.FC<IPreviewProps> = ({ url = 'radio-n.png', width = '190px'
   )
 }
 
-export default Preview
+export default React.memo(Preview)
