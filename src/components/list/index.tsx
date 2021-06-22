@@ -1,5 +1,6 @@
+import { Scrollbars } from 'rc-scrollbars'
 import React from 'react'
-import { Virtuoso } from 'react-virtuoso'
+import { Components, Virtuoso } from 'react-virtuoso'
 import settings from '../../lib/settings'
 import ListItem from '../listItem'
 import Loading from '../loading'
@@ -65,6 +66,18 @@ const List = <T extends {}>({
     ...(isScrolling && { isScrolling })
   }
 
+  const Scroller: Components['Scroller'] = React.forwardRef(({ children, style }, ref) => {
+    return (
+      <Scrollbars
+        autoHide={false}
+        ref={sRef => ((ref as any).current = (sRef as any)?.view)}
+        style={style}
+      >
+        {children}
+      </Scrollbars>
+    )
+  })
+
   return (
     <Virtuoso
       {...listProps}
@@ -81,6 +94,7 @@ const List = <T extends {}>({
           />
         )
       }}
+      components={{ Scroller }}
     />
   )
 }

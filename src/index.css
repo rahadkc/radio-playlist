@@ -58,6 +58,9 @@ img {
   max-width: 100%;
 }
 
+.rc-scrollbars-container {
+  overflow: hidden!important;
+}
 
 @media only screen and (max-width: 840px) {
   html {

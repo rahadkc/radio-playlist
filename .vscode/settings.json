@@ -2,5 +2,6 @@
     "files.associations": {
         "**/App.tsx": "typescriptreact",
         "**/App.js": "jsx"
-    }
+    },
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
