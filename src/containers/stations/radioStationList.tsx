@@ -49,7 +49,7 @@ const RadioStationList: React.FC<RadioStationListProps> = () => {
 
   return (
     <Container classes={commonStyles.hFull}>
-      <div className={classNames(styles.box, commonStyles.hFull)}>
+      <div className={classNames(styles.box, commonStyles.hFull, styles.scrollBox)}>
         <List data={items} loading={loading} onItemClick={handleItemClick} />
       </div>
     </Container>

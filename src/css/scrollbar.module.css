@@ -1,0 +1,13 @@
+.scrollable::-webkit-scrollbar {
+  transition: 2s;
+  width: .4em
+}
+
+.scrollable:hover::-webkit-scrollbar {
+  width: .4em
+}
+
+.scrollable:hover::-webkit-scrollbar-thumb {
+  outline: 1px solid rgba(0,0,0,.3);
+  box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+}
