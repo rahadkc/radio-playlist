@@ -1,6 +1,5 @@
-import { Scrollbars } from 'rc-scrollbars'
 import React from 'react'
-import { Components, Virtuoso } from 'react-virtuoso'
+import { Virtuoso } from 'react-virtuoso'
 import settings from '../../lib/settings'
 import ListItem from '../listItem'
 import Loading from '../loading'
@@ -59,6 +58,19 @@ const List = <T extends {}>({
 
   const listProps = {
     data,
+    itemContent: (index: number, item: any) => {
+      if (listitemcontent) {
+        return listitemcontent(index, item)
+      }
+      return (
+        <ListItem
+          index={index}
+          item={item}
+          activeIndex={activeIndex}
+          handleClick={handleItemClick}
+        />
+      )
+    },
     ...(alignToBottom && { alignToBottom }),
     ...(firstItemIndex && { firstItemIndex }),
     ...(initialItemCount && { initialItemCount }),
@@ -66,37 +78,7 @@ const List = <T extends {}>({
     ...(isScrolling && { isScrolling })
   }
 
-  const Scroller: Components['Scroller'] = React.forwardRef(({ children, style }, ref) => {
-    return (
-      <Scrollbars
-        autoHide={false}
-        ref={sRef => ((ref as any).current = (sRef as any)?.view)}
-        style={style}
-      >
-        {children}
-      </Scrollbars>
-    )
-  })
-
-  return (
-    <Virtuoso
-      {...listProps}
-      itemContent={(index: number, item: any) => {
-        if (listitemcontent) {
-          return listitemcontent(index, item)
-        }
-        return (
-          <ListItem
-            index={index}
-            item={item}
-            activeIndex={activeIndex}
-            handleClick={handleItemClick}
-          />
-        )
-      }}
-      components={{ Scroller }}
-    />
-  )
+  return <Virtuoso {...listProps} />
 }
 
 export default List
